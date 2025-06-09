@@ -15,7 +15,7 @@ class Parser:
     Used for parsing commands.
     """
 
-    command_separator = attrib(default=Factory(lambda: ' '))
+    command_separator = ' '
     command_class = attrib(default=Factory(lambda: Command))
     default_args_regexp = attrib(default=Factory(lambda: None))
     commands = attrib(default=Factory(dict), repr=False)
