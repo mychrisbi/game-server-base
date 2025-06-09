@@ -39,7 +39,7 @@ class Server:
 
     port = attrib(default=Factory(lambda: 4000))
     interface = attrib(default=Factory(lambda: '0.0.0.0'))
-    factory = attrib(default=Factory(lambda: None), repr=False)
+    factory = attrib(default=Factory(lambda: None), repr=False, eq=False)
     default_parser = attrib(default=Factory(Parser), repr=False)
     connections = attrib(default=Factory(list), init=False, repr=False)
     started = attrib(default=Factory(lambda: None), init=False)
